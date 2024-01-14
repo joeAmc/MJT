@@ -1,14 +1,10 @@
 .header {
-  width: 100vw;
-  height: 80px;
+  height: 8em;
   background-color: white;
-  /* border-top: 2px solid var(--primary-color);
-  border-bottom: 2px solid var(--primary-color); */
-  /* margin-top: 22px; */
   position: relative;
-  /* display: flex;  */
-  /* align-items: center;
-  justify-content: space-between; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
 }
@@ -19,12 +15,6 @@
   z-index: 2;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 } */
-
-.header h1 {
-  /* position: absolute;
-    left: 160px;
-    top: 16px; */
-}
 
 .header img {
   height: 120px;
@@ -38,7 +28,6 @@
 }
 
 .nav {
-  /* margin-right: 32px; */
   display: flex;
   justify-content: center;
   align-items: center;

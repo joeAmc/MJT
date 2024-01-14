@@ -1,0 +1,48 @@
+.homeContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:
+    calc(var(--header-height) * 100vh) calc(var(--banner-height) * 100vh)
+    calc(var(--about-height) * 100vh) calc(var(--collections-height) * 100vh)
+    calc(var(--footer-height) * 100vh);
+  grid-template-areas:
+    "Header Header"
+    "Banner Banner"
+    "About About"
+    "Collections Collections"
+    "Footer Footer";
+  background-color: aqua;
+  grid-gap: 0.2rem;
+}
+
+.header {
+  grid-area: Header;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  /* background-color: blue; */
+}
+
+.banner {
+  grid-area: Banner;
+  background-color: green;
+}
+
+.about1 {
+  grid-area: About;
+  background-color: yellow;
+}
+.about2 {
+  grid-area: About;
+  background-color: rgb(85, 161, 84);
+}
+
+.collections {
+  grid-area: Collections;
+  background-color: orange;
+}
+
+.footer {
+  grid-area: Footer;
+  background-color: red;
+}
