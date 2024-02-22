@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Collections.module.css";
 import { collections } from "./collections-data";
+import Link from "next/link";
 
 const Collections = ({ gridArea }) => {
   return (
@@ -13,7 +14,11 @@ const Collections = ({ gridArea }) => {
             className={classes.collection}
             style={{ background: `url(${collection.imagePath})` }}
           >
-            <button className="btn">{collection.name}</button>
+            <button className="btn">
+              <Link href={`/${collection.name.toLowerCase()}`}>
+                {collection.name}
+              </Link>
+            </button>
           </div>
         ))}
       </div>
