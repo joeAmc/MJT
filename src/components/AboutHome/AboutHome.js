@@ -6,7 +6,7 @@ import Silvia from "../../assets/Silvia.jpeg";
 const AboutHome = () => {
   return (
     <div className={classes.aboutcontainer}>
-      <Image className={classes.image} src={Silvia} alt="logo" />
+      <Image className={classes.image} src={Silvia} alt="silvia" />
       <div className={classes.content}>
         <h1>Hand Crafted Jeweller</h1>
         <p>

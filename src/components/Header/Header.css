@@ -45,6 +45,7 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+  margin-left: 24px;
 }
 
 .about-link svg,
