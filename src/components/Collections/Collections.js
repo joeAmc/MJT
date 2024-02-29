@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Collections.module.css";
 import { collections } from "./collections-data";
 import Link from "next/link";
+// import Image from "next/image";
 
 const Collections = ({ gridArea }) => {
   return (

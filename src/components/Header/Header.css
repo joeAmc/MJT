@@ -9,13 +9,6 @@
   transition: var(--transition);
 }
 
-/* .header.active {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-} */
-
 .header img {
   height: 120px;
   width: auto;
@@ -36,12 +29,9 @@
 
 .nav h3 {
   text-decoration: none;
-  /* color: var(--primary-color); */
   font-size: 20px;
   transition: var(--transition);
   padding: 12px;
-  /* font-family: "El Messiri", sans-serif; */
-  /* font-weight: 700; */
 }
 
 .nav svg {
@@ -53,31 +43,12 @@
 .about-link {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   position: relative;
 }
 
-.about-link svg {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-.about-link:hover svg {
-  color: var(--primary-color);
-}
-
-.collect-link {
-  display: flex;
-  flex-direction: column;
-  margin-left: 18px;
-  justify-content: center;
-  position: relative;
-}
-
+.about-link svg,
+.contact-link svg,
 .collect-link svg {
   position: absolute;
   bottom: -10px;
@@ -86,10 +57,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+.about-link:hover svg,
+.contact-link:hover svg,
 .collect-link:hover svg {
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
+.collect-link,
 .contact-link {
   display: flex;
   flex-direction: column;
@@ -97,17 +71,8 @@
   justify-content: center;
   position: relative;
 }
-
-.contact-link svg {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-.contact-link:hover svg {
-  color: var(--secondary-color);
+.collect-link.active svg {
+  color: var(--accent-color);
 }
 
 @media only screen and (max-width: 850px) {

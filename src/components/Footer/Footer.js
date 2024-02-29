@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footer">
           <div className="footer-items">
             <Link href="/">
-              <Image onClick={scrollTop} src={Logo} alt="logo" />
+              <Image onClick={scrollTop} src={Logo} alt="logo" priority />
             </Link>
             <ul className="footer-links">
               <li>

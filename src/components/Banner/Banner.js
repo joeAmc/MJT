@@ -4,6 +4,7 @@ import Logo from "../../assets/Logo.png";
 import Image from "next/image";
 
 const Banner = () => {
+  console.log("Banner.js: Banner component rendered!");
   return (
     <section>
       <div className="banner-container">
