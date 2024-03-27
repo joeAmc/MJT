@@ -13,6 +13,13 @@ const HeaderLink = ({ href, children, className }) => {
     <div
       className={`${className} ${pathname.startsWith(`${href}`) && "active"} `}
     >
+      {/* <div
+      className={
+        pathname.startsWith(href)
+          ? `${classes.link} ${classes.active}`
+          : classes.link
+      }
+    > */}
       <Link href={href}>
         <h3>{children}</h3>
         <BsThreeDots />
