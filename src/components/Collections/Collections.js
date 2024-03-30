@@ -15,11 +15,9 @@ const Collections = ({ gridArea }) => {
             className={classes.collection}
             style={{ background: `url(${collection.imagePath})` }}
           >
-            <button className="btn">
-              <Link href={`/${collection.name.toLowerCase()}`}>
-                {collection.name}
-              </Link>
-            </button>
+            <Link href={`/${collection.name.toLowerCase()}`}>
+              <button className="btn">{collection.name}</button>
+            </Link>
           </div>
         ))}
       </div>
