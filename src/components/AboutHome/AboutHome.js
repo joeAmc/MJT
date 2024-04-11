@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./AboutHome.module.css";
 import Image from "next/image";
-import Silvia from "../../assets/Silvia.jpeg";
+import Silvia from "../../assets/rings.jpg";
 
 const AboutHome = () => {
   return (
