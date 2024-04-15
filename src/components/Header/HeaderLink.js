@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { BsThreeDots } from "react-icons/bs";
-import "./HeaderLink.css";
 import { usePathname } from "next/navigation";
 
 const HeaderLink = ({ href, children, className }) => {
@@ -13,16 +12,11 @@ const HeaderLink = ({ href, children, className }) => {
     <div
       className={`${className} ${pathname.startsWith(`${href}`) && "active"} `}
     >
-      {/* <div
-      className={
-        pathname.startsWith(href)
-          ? `${classes.link} ${classes.active}`
-          : classes.link
-      }
-    > */}
       <Link href={href}>
-        <h3>{children}</h3>
-        <BsThreeDots />
+        <h3 className="text-2xl p-3">{children}</h3>
+        <div className="text-4xl text-white transition-all duration-500">
+          <BsThreeDots />
+        </div>
       </Link>
     </div>
   );

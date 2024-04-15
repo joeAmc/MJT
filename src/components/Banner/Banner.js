@@ -7,19 +7,19 @@ import Image from "next/image";
 const Banner = () => {
   return (
     <section>
-      <div className="banner-container h-screen w-screen flex justify-center bg-banner">
+      <div className="banner-container h-screen w-screen flex justify-center relative bg-gradient-to-l">
         <Image
-          className="object-cover absolute -z-50"
+          className="object-cover absolute -z-50 h-screen"
           src={bannerImg}
           alt="banner image"
         />
-        <div className="banner-content flex  flex-col justify-center items-center">
+        <div className="banner-content flex  flex-col justify-center items-center mb-24">
           <Image
-            className="banner-logo h-[10em] w-[10em]"
+            className="banner-logo h-[15em] w-[15em]"
             src={Logo}
             alt="logo"
           />
-          <h1 className="text-2xl">Midas Touch Jewellery</h1>
+          <h1 className="text-5xl	text-white	">Midas Touch Jewellery</h1>
         </div>
       </div>
     </section>

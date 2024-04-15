@@ -10,14 +10,21 @@ const HeaderType = () => {
   const pathname = usePathname();
 
   return (
-    <div className="header-text">
+    <div className="header-text ml-28">
       {(() => {
         if (pathname === "/") {
           return (
-            <div className="nav">
+            <div className="nav flex justify-center items-center h-full">
               <h1>Midas Touch</h1>
-              <Image src={logo} alt="logo" />
-              <HeaderLink href="#about" className="about-link">
+              <Image
+                className="h-14 w-auto absolute top-0 bottom-0 mt-auto mb-auto left-[32px]"
+                src={logo}
+                alt="logo"
+              />
+              <HeaderLink
+                href="#about"
+                className="about-link flex justify-center ml-6 flex-col relative"
+              >
                 About
               </HeaderLink>
               <HeaderLink href="#collections" className="collect-link">
@@ -27,8 +34,11 @@ const HeaderType = () => {
           );
         } else {
           return (
-            <div className="nav">
-              <HeaderLink href="/" className="about-link">
+            <div className="nav flex justify-center items-center h-full">
+              <HeaderLink
+                href="/"
+                className="about-link flex justify-center ml-6 flex-col relative"
+              >
                 Home
               </HeaderLink>
               <HeaderLink href="/rings" className="collect-link">
