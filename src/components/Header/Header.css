@@ -62,13 +62,13 @@
   margin-left: auto;
   margin-right: auto; */
 }
-.about-link:hover svg,
+/* .about-link:hover svg,
 .contact-link:hover svg,
 .collect-link:hover svg {
   color: var(--primary-color);
-}
+} */
 
-.collect-link,
+/* .collect-link,
 .contact-link {
   display: flex;
   flex-direction: column;
@@ -78,4 +78,11 @@
 }
 .collect-link.active svg {
   color: var(--accent-color);
+} */
+
+.header-links {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* position: relative; */
+  /* justify-content: center; */
 }
