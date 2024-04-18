@@ -1,19 +1,24 @@
 import React from "react";
-import "./Banner.css";
 import Logo from "../../assets/Logo.png";
 import bannerImg from "../../assets/banner.jpg";
 import Image from "next/image";
+import { clsx } from "clsx";
 
 const Banner = () => {
   return (
     <section>
-      <div className="banner-container h-screen w-screen flex justify-center relative bg-gradient-to-l">
+      <div
+        className={clsx(
+          "banner-container h-screen w-screen flex",
+          "justify-center relative bg-gradient-to-l"
+        )}
+      >
         <Image
           className="object-cover absolute -z-50 h-screen"
           src={bannerImg}
           alt="banner image"
         />
-        <div className="banner-content flex  flex-col justify-center items-center mb-24">
+        <div className="banner-content flex flex-col justify-center items-center mb-24">
           <Image
             className="banner-logo h-[15em] w-[15em]"
             src={Logo}
