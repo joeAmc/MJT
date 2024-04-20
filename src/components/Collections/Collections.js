@@ -1,18 +1,19 @@
 import React from "react";
-import classes from "./Collections.module.css";
 import { collections } from "./collections-data";
 import Link from "next/link";
-// import Image from "next/image";
 
 const Collections = ({ gridArea }) => {
   return (
-    <>
-      <h1 className={classes.heading}>Our Collections</h1>
-      <div id="collections" className={classes.collectionsContainer}>
+    <div className="v-screen">
+      <h1 className="text-center">Our Collections</h1>
+      <div
+        id="collections"
+        className=".collectionsContainer grid grid-cols-2 grid-rows-2 gap-12 m-12"
+      >
         {collections.map((collection, i) => (
           <div
             key={i}
-            className={classes.collection}
+            className="collection relative h-screen w-full flex background-cover justify-center items-center"
             style={{ background: `url(${collection.imagePath})` }}
           >
             <Link href={`/${collection.name.toLowerCase()}`}>
@@ -21,7 +22,7 @@ const Collections = ({ gridArea }) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
