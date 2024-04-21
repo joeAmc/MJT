@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import classes from "./Card.module.css";
 import Logo from "../../assets/logo.png";
+import { clsx } from "clsx";
 
 const rings = [
   {
@@ -24,12 +24,17 @@ const rings = [
 
 export default function RingCard() {
   return (
-    <div className={classes.cardsContainer}>
+    <div
+      className={clsx(
+        "cardsContainer grid grid-cols-3 justify-items-center",
+        "gap-y-10 gap-x-10 my-8 mx-6"
+      )}
+    >
       {rings.map(({ id, src, title }) => {
         return (
-          <div className={classes.card} key={id}>
+          <div className="card flex flex-col w-96 h-96 relative" key={id}>
             <Link href={`/rings/${id}`}>
-              <Image fill src={src} alt={title} />
+              <Image className="w-full h-full" fill src={src} alt={title} />
             </Link>
             <h3>{title}</h3>
           </div>
