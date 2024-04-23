@@ -1,9 +1,9 @@
-import RingItem from "../../../components/Cards/RingItem";
+import RingGallery from "../../../components/Cards/RingGallery";
 
 const Ring = () => {
   return (
     <>
-      <RingItem />
+      <RingGallery />
     </>
   );
 };

@@ -44,7 +44,11 @@ const HeaderType = () => {
               <HeaderLink href="/rings" className="collect-link">
                 Rings
               </HeaderLink>
-              <Image src={logo} alt="logo" />
+              <Image
+                className="h-14 w-auto absolute top-0 bottom-0 mt-auto mb-auto left-[32px]"
+                src={logo}
+                alt="logo"
+              />
               <HeaderLink href="/earrings" className="collect-link">
                 Earrings
               </HeaderLink>

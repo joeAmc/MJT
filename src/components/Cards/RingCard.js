@@ -22,7 +22,7 @@ const rings = [
   },
 ];
 
-export default function RingCard() {
+const RingCard = () => {
   return (
     <div
       className={clsx(
@@ -36,10 +36,11 @@ export default function RingCard() {
             <Link href={`/rings/${id}`}>
               <Image className="w-full h-full" fill src={src} alt={title} />
             </Link>
-            <h3>{title}</h3>
           </div>
         );
       })}
     </div>
   );
-}
+};
+
+export default RingCard;
