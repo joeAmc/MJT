@@ -40,7 +40,11 @@ const RingGallery = ({ title }) => {
   const [isGallery, setIsGallery] = useState(true);
 
   const toggleZoom = () => {
-    setIsCollapsed(!isGallery);
+    setIsGallery(!isGallery);
+  };
+
+  const closeZoom = () => {
+    setIsGallery(!isGallery);
   };
 
   return (
@@ -63,9 +67,18 @@ const RingGallery = ({ title }) => {
           );
         })}
       </div>
-      <div className="background h-full w-full fixed top-0 left-0 bg-black-rgba ">
-        HELLP
-      </div>
+      {!isGallery && (
+        <div onClick={closeZoom}>
+          <div className="close-up rounded-lg bg-white w-3/5 h-3/5 mt-[160px] z-50 fixed top-0 bottom-0 left-0 right-0 mx-auto">
+            <Image
+              className="h-full rounded-lg object-cover"
+              src={Rings}
+              alt={title}
+            />
+          </div>
+          <div className="background h-full w-full fixed top-0 left-0 bg-black-rgba "></div>
+        </div>
+      )}
       <h1>buy here</h1>
     </div>
   );
