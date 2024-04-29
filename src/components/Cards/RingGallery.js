@@ -87,7 +87,8 @@ const RingGallery = ({ title }) => {
         <div onClick={closeZoom}>
           <div
             className={clsx(
-              "close-up rounded-lg bg-white w-3/5 h-3/5 mt-[160px] z-50 fixed top-0 bottom-0 left-0 right-0 mx-auto"
+              "close-up rounded-lg bg-white w-3/5 h-3/5 mt-[160px]",
+              "z-50 fixed top-0 bottom-0 left-0 right-0 mx-auto"
             )}
           >
             <Image

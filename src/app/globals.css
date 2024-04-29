@@ -74,6 +74,7 @@ p {
   font-size: 1.1rem;
   transition: var(--transition);
   width: fit-content;
+  border-radius: var(--border-radius);
 }
 
 .btn:hover {

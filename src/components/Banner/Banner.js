@@ -6,18 +6,20 @@ import { clsx } from "clsx";
 
 const Banner = () => {
   return (
-    <section>
+    <section className="">
       <div
         className={clsx(
           "banner-container h-screen w-screen flex overflow-au",
           "justify-center relative bg-gradient-to-l"
         )}
       >
-        <Image
-          className="object-cover -z-50 h-screen absolute top-0 left-0"
-          src={bannerImg}
-          alt="banner image"
-        />
+        <div className="h-screen">
+          <Image
+            className="-z-50 h-screen fixed top-0 left-0"
+            src={bannerImg}
+            alt="banner image"
+          />
+        </div>
         <div className="banner-content flex flex-col justify-center items-center mb-24">
           <Image
             className="banner-logo h-[15em] w-[15em]"
