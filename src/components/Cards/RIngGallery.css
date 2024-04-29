@@ -81,3 +81,24 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* an alternave to the grid css above  */
+.cardImage:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+.cardImage img {
+  object-fit: cover;
+  height: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  .cardsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.cardsContainer {
+  gap: 20px;
+}
