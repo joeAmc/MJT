@@ -9,13 +9,13 @@ const Banner = () => {
     <section className="">
       <div
         className={clsx(
-          "banner-container h-screen w-screen flex overflow-au",
+          "banner-container h-screen w-screen flex",
           "justify-center relative bg-gradient-to-l"
         )}
       >
         <div className="h-screen">
           <Image
-            className="-z-50 h-screen fixed top-0 left-0"
+            className="-z-50 h-full object-cover fixed left-0 "
             src={bannerImg}
             alt="banner image"
           />

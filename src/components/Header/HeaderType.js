@@ -5,6 +5,7 @@ import HeaderLink from "./HeaderLink";
 import { usePathname } from "next/navigation";
 import logo from "../../assets/Logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeaderType = () => {
   const pathname = usePathname();
@@ -15,15 +16,17 @@ const HeaderType = () => {
         if (pathname === "/") {
           return (
             <div className="nav flex justify-center items-center h-full">
-              <h1>Midas Touch</h1>
-              <Image
-                className="h-14 w-auto absolute top-0 bottom-0 mt-auto mb-auto left-[32px]"
-                src={logo}
-                alt="logo"
-              />
+              <h1 className="mr-4">Midas Touch</h1>
+              <Link href="/">
+                <Image
+                  className="h-[60px] w-auto absolute top-0 bottom-0 mt-auto mb-auto left-[32px]"
+                  src={logo}
+                  alt="logo"
+                />
+              </Link>
               <HeaderLink
                 href="#about"
-                className="about-link flex justify-center ml-6 flex-col relative"
+                className="about-link flex justify-center flex-col relative"
               >
                 About
               </HeaderLink>
@@ -35,20 +38,17 @@ const HeaderType = () => {
         } else {
           return (
             <div className="nav flex justify-center items-center h-full">
-              <HeaderLink
-                href="/"
-                className="about-link flex justify-center ml-6 flex-col relative"
-              >
-                Home
-              </HeaderLink>
+              <h1 className="mr-4">Midas Touch</h1>
+              <Link href="/">
+                <Image
+                  className="h-[60px] w-auto absolute top-0 bottom-0 mt-auto mb-auto left-[32px]"
+                  src={logo}
+                  alt="logo"
+                />
+              </Link>
               <HeaderLink href="/rings" className="collect-link">
                 Rings
               </HeaderLink>
-              <Image
-                className="h-14 w-auto absolute top-0 bottom-0 mt-auto mb-auto left-[32px]"
-                src={logo}
-                alt="logo"
-              />
               <HeaderLink href="/earrings" className="collect-link">
                 Earrings
               </HeaderLink>
